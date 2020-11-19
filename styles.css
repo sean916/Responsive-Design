@@ -48,8 +48,10 @@ table {
 }
 
 /* End Reset */
-/* 767 width breakpoint */
-
+* {
+    box-sizing: border-box;
+    background-color: gainsboro;
+}
 .wrapper {
     display: inline-block;
     width: 100%;
@@ -70,7 +72,6 @@ table {
 .featured {
     width: 100%;
     padding: 5px;
-    background-color: gainsboro;
 }
 
 .featured-1 {
@@ -100,6 +101,7 @@ table {
     max-width: 1200px;
     padding: 5px;
     border: 1px solid blue;
+    clear: both;
 }
 
 .flex-box {
@@ -125,7 +127,7 @@ table {
     display: flex;
     min-width: 220px;
     max-width: 800px;
-    min-height: 250px;
+    height: 250px;
     flex-grow: 1;
     margin: 10px;
     border: 1px solid orange;
@@ -164,7 +166,112 @@ table {
     border-right: 0px;
 }
 
+.flex-box .categories {
+    display: flex;
+    min-width: 308px;
+    max-width: 800px;
+    min-height: 650px;
+    flex-grow: 1;
+    margin: 10px;
+    border: 1px solid orange;
+}
 
+.flex-box .placeholder-categories {
+    display: flex;
+    min-width: 308px;
+    max-width: 800px;
+    flex-grow: 1;
+    margin: 10px;
+}
 
-/* Need media query 1025px width breakpoint for funding*/
+.footer {
+    width: 100%;
+    height: 150px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(20, 20, 20);
+}
 
+.copyright {
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+@media screen and (max-width: 1025px) {
+
+}
+
+/* 767 width breakpoint */
+@media screen and (max-width: 767px) {
+    .top-nav {
+        display: none;
+    }
+    .featured {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    .featured-1, .featured-2, .featured-3 {
+        margin: 0px 2% 20px 2%;
+        width: 96%;
+        height: 250px;
+        display: block;
+        box-sizing: border-box;   
+    }
+    .featured-1 {
+        margin-top: 10px;
+    }
+    .featured-3 {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        margin: 10px;
+    }
+
+    .flex-box .news {
+        width: 100%;
+        height: 100px;
+    }
+
+    .flex-header {
+        font-size: 22px;
+    }
+    .fund li {
+        float: none;
+        position: relative;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 5px;
+        margin: 5px 0px 0px -4px;
+        border-right: none;
+    }
+    
+    .flex-box .funding {
+        width: 100%;
+    }
+
+    .flex-box .funding-4 {
+        display: none;
+    }
+
+    .flex-box .categories {
+        display: flex;
+        min-width: 0px;
+        width: 100%;
+        min-height: 700px;
+        flex-grow: 1;
+        margin: 10px;
+        border: 1px solid orange;
+    }
+
+    .deals .deal-8 {
+        display: none;
+    }
+    
+}
