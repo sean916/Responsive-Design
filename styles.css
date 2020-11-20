@@ -50,7 +50,6 @@ table {
 /* End Reset */
 * {
     box-sizing: border-box;
-    background-color: gainsboro;
 }
 .wrapper {
     display: inline-block;
@@ -60,15 +59,37 @@ table {
 .top-nav {
     width: 100%;
     height: 30px;
-    background-color:  rgb(40, 40, 43);
+    background-color:  rgb(20, 20, 20);
+}
+
+.top-nav li {
+    float: left;
+    margin: 5px 0px 5px 20px;
+    color: gray;
+    background-color: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.top-nav li:first-child {
+    color: gainsboro;
 }
 
 .top-nav-2 {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     background-color: white;
 }
-
+.top-nav-2 li {
+    float: left;
+    margin: 15px 0px 5px 30px;
+    color: rgb(140, 140, 140);
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.top-nav-2 ul li:first-child {
+    margin-left: 15%;
+}
 .featured {
     width: 100%;
     padding: 5px;
@@ -78,22 +99,63 @@ table {
     display: inline-block;
     width: 65%;
     height: 450px;
-    background-color: black;
+    background-image: url("assets/feature-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    padding: 250px 20px 20px 20px;
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;;
+}
+.author {
+    color: rgb(238, 238, 238);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 20px;
 }
 
 .featured-2 {
     float: right;
     width: 34%;
     height: 220px;
-    background-color: orange;
+    background-image: url("assets/feature-2.jpeg");
+    background-image: -webkit-linear-gradient(to bottom, rgba(70, 70, 70, 0.4), url("assets/feature-2.jpg"));
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 20px 20px 20px;
+    opacity: 0.75;
+}
+
+.featured-2 .title {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 .featured-3 {
     float: right;
-    margin-top: -220px;
+    margin-top: -224px;
     width: 34%;
     height: 220px;
-    background-color: red;
+    background-image: url("assets/feature-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    padding: 20px;
+}
+
+.featured-3 .title {
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 .container {
@@ -117,7 +179,7 @@ table {
     display: inline-block;
     width: 96%;
     color: red;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 20px;
@@ -130,10 +192,45 @@ table {
     height: 250px;
     flex-grow: 1;
     margin: 10px;
-    border: 1px solid orange;
 
 }
+.news-title {
+    display: inline-block;
+    position: relative;
+    width: 23%;
+    height: 80px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+}
 
+@media screen and (max-width: 1006px) {
+    .news-title {
+        display: inline-block;
+        position: absolute;
+        width: 30%;
+        height: 80px;
+        margin-top: 160px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+.news-author {
+    display: inline-block;
+    position: absolute;
+    margin-top: 230px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: gray;
+}
 .flex-box .placeholder {
     display: flex;
     min-width: 220px;
@@ -142,6 +239,56 @@ table {
     margin: 10px;
 }
 
+.latest-1 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-1.jpeg");
+    background-size: cover;
+}
+
+.latest-2 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-2.jpg");
+    background-size: cover;
+}
+
+.latest-3 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-3.jpeg");
+    background-size: cover;
+}
+.latest-4 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-4.jpg");
+    background-size: cover;
+}
+.latest-5 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-5.webp");
+    background-size: cover;
+}
+.latest-6 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-6.jpeg");
+    background-size: cover;
+}
+.latest-7 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-7.jpeg");
+    background-size: cover;
+}
+.latest-8 .news-img {
+    width: 100%;
+    height: 150px;
+    background-image: url("assets/news-8.jpg");
+    background-size: cover;
+}
 .flex-box .funding {
     display: flex;
     min-width: 220px;
@@ -209,6 +356,29 @@ table {
     .top-nav {
         display: none;
     }
+
+    .top-nav-2 {
+        width: 100%;
+        min-height: 150px;
+        background-color: white;
+    }
+
+    .top-nav-2 ul li:first-child {
+        margin-left: 30px;
+    }
+
+    .top-nav-2 li {
+        float: none;
+        display: inline-block;
+        margin: 15px 0px 0px 30px;
+        color: gray;
+        width: 100%;
+        background-color: gainsboro;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+
     .featured {
         width: 100%;
         display: block;
