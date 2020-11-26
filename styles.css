@@ -73,6 +73,9 @@ table {
 .top-nav li:first-child {
     color: gainsboro;
 }
+.top-nav li:hover {
+    opacity: .5;
+}
 
 .top-nav-2 {
     width: 100%;
@@ -87,12 +90,19 @@ table {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
+.top-nav-2 li:hover {
+    opacity: .5;
+}
 .top-nav-2 ul li:first-child {
     margin-left: 15%;
 }
 .featured {
     width: 100%;
     padding: 5px;
+}
+
+.featured:hover {
+    opacity: .4;
 }
 
 .featured-1 {
@@ -113,7 +123,7 @@ table {
     font-weight: bolder;;
 }
 .author {
-    color: rgb(238, 238, 238);
+    color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     position: absolute;
@@ -184,6 +194,9 @@ table {
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 20px;
 }
+.flex-header:hover {
+    opacity: .5;
+}
 
 .flex-box .news {
     display: flex;
@@ -193,6 +206,10 @@ table {
     flex-grow: 1;
     margin: 10px;
 
+}
+
+.flex-box .news:hover {
+    opacity: .5;
 }
 .news-title {
     display: inline-block;
@@ -360,7 +377,14 @@ table {
     .top-nav-2 {
         width: 100%;
         min-height: 150px;
-        background-color: white;
+        background-color: gainsboro;
+        padding: 5px;
+        
+    }
+
+    .top-nav-2 ul {
+        width: 100%;
+        text-align: center;
     }
 
     .top-nav-2 ul li:first-child {
@@ -371,21 +395,25 @@ table {
         float: none;
         display: inline-block;
         margin: 15px 0px 0px 30px;
-        color: gray;
+        color: rgb(90, 90, 90);
         width: 100%;
         background-color: gainsboro;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
     }
 
-
     .featured {
         width: 100%;
-        display: block;
+        display: table-cell;
         box-sizing: border-box;
         margin: 0px;
-        padding: 0px;
+        padding: 20px;
+        padding-top: 100px;
+        text-align: center;
+        vertical-align: bottom;
+        
     }
+
     .featured-1, .featured-2, .featured-3 {
         margin: 0px 2% 20px 2%;
         width: 96%;
@@ -396,9 +424,23 @@ table {
     .featured-1 {
         margin-top: 10px;
     }
+    .featured-1 .title {
+        background-color: gray;
+        opacity: .75;
+    }
+    .featured-1 .author {
+        background-color: gray;
+        opacity: 1;
+    }
+
     .featured-3 {
         margin-bottom: 50px;
     }
+
+    .author {
+        font-size: 14px;
+    }
+
 
     .container {
         margin: 10px;
