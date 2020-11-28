@@ -172,7 +172,6 @@ table {
     margin: 50px auto 50px auto;
     max-width: 1200px;
     padding: 5px;
-    border: 1px solid blue;
     clear: both;
 }
 
@@ -201,7 +200,7 @@ table {
 .flex-box .news {
     display: flex;
     min-width: 220px;
-    max-width: 800px;
+    max-width: 320px;
     height: 250px;
     flex-grow: 1;
     margin: 10px;
@@ -211,12 +210,13 @@ table {
 .flex-box .news:hover {
     opacity: .5;
 }
+
 .news-title {
     display: inline-block;
-    position: relative;
-    width: 23%;
+    position: absolute;
+    width: 30%;
     height: 80px;
-    margin-top: 10px;
+    margin-top: 160px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-family: Arial, Helvetica, sans-serif;
@@ -224,22 +224,13 @@ table {
     font-size: 14px;
     line-height: 1.4;
 }
-
-@media screen and (max-width: 1006px) {
+@media screen and (min-width: 1007px) {
     .news-title {
-        display: inline-block;
-        position: absolute;
-        width: 30%;
-        height: 80px;
-        margin-top: 160px;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
+        width: 22%;
         font-size: 14px;
-        line-height: 1.4;
     }
 }
+
 .news-author {
     display: inline-block;
     position: absolute;
@@ -256,64 +247,37 @@ table {
     margin: 10px;
 }
 
-.latest-1 .news-img {
+.news-img {
+    background-size: cover;
     width: 100%;
     height: 150px;
+}
+
+.latest-1 .news-img {
     background-image: url("assets/news-1.jpeg");
-    background-size: cover;
 }
 
 .latest-2 .news-img {
-    width: 100%;
-    height: 150px;
     background-image: url("assets/news-2.jpg");
-    background-size: cover;
 }
 
 .latest-3 .news-img {
-    width: 100%;
-    height: 150px;
     background-image: url("assets/news-3.jpeg");
-    background-size: cover;
 }
 .latest-4 .news-img {
-    width: 100%;
-    height: 150px;
     background-image: url("assets/news-4.jpg");
-    background-size: cover;
 }
 .latest-5 .news-img {
-    width: 100%;
-    height: 150px;
     background-image: url("assets/news-5.webp");
-    background-size: cover;
 }
 .latest-6 .news-img {
-    width: 100%;
-    height: 150px;
     background-image: url("assets/news-6.jpeg");
-    background-size: cover;
 }
 .latest-7 .news-img {
-    width: 100%;
-    height: 150px;
     background-image: url("assets/news-7.jpeg");
-    background-size: cover;
 }
 .latest-8 .news-img {
-    width: 100%;
-    height: 150px;
     background-image: url("assets/news-8.jpg");
-    background-size: cover;
-}
-.flex-box .funding {
-    display: flex;
-    min-width: 220px;
-    max-width: 800px;
-    min-height: 250px;
-    flex-grow: 1;
-    margin: 10px;
-    border: 1px solid orange;
 }
 
 .fund li {
@@ -328,6 +292,83 @@ table {
 
 .fund li:first-child {
     border-right: 0px;
+}
+
+.flex-box .funding {
+    display: inline-block;
+    min-width: 10px;
+    max-width: 340px;
+    min-height: 250px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px;
+}
+
+.fund-title {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.fund-amount {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 215, 222);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+.fund-amount .fund-series {
+    color: gray;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: arial;
+}
+
+.fund-type span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25px;
+    font-family: arial;
+}
+
+.fund-type span:hover {
+    opacity: .5;
+}
+
+.fund-type {
+    border-bottom: 1px solid pink;
+    padding: 20px;
+    background-color: rgb(255, 248, 249)
+}
+.fund-description span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 25px;
+    padding-top: 10px;
+    background-color: rgb(255, 248, 249);
+    font-size: 14px;
+    font-family: arial;
+    padding: 10px;
+    color: rgb(82, 82, 82);
+}
+
+.fund-description .source {
+    color: rgb(160, 160, 160);
 }
 
 .flex-box .categories {
@@ -355,6 +396,24 @@ table {
     padding: 0px;
     background-color: rgb(20, 20, 20);
 }
+.footer ul {
+    width: 100%;
+    border: 1px solid white;
+}
+
+
+.footer li {
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 70px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.footer li:hover {
+    opacity: .5;
+}
 
 .copyright {
     width: 100%;
@@ -363,10 +422,19 @@ table {
     padding: 0px;
     background-color: black;
 }
-
-@media screen and (max-width: 1025px) {
-
+.copyright {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-left: 20%;
+    margin-right: auto;
+    padding-top: 40px;
 }
+.copyright span {
+    color: gainsboro;
+    font-weight: bold;
+}
+
 
 /* 767 width breakpoint */
 @media screen and (max-width: 767px) {
@@ -447,9 +515,11 @@ table {
     }
 
     .flex-box .news {
+        max-width: 767px;
         width: 100%;
         height: 100px;
     }
+
 
     .flex-header {
         font-size: 22px;
@@ -472,18 +542,53 @@ table {
         display: none;
     }
 
-    .flex-box .categories {
-        display: flex;
-        min-width: 0px;
-        width: 100%;
-        min-height: 700px;
-        flex-grow: 1;
-        margin: 10px;
-        border: 1px solid orange;
+    .news {
+        display: inline-block;
+    }
+    .news-img {
+        width: 100px;
+        height: 100px;
     }
 
-    .deals .deal-8 {
-        display: none;
+    .news-title {
+        display: block;
+        position: relative;
+        width: 75%;
+        height: 70px;
+        margin-top: 0px;
+        margin-left: 10px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1.4;
     }
-    
+    .news-author {
+        display: inline-block;
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 110px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: gray;
+    }
+
+    .flex-box .funding {
+        display: inline-block;
+        min-width: 10px;
+        max-width: 768px;
+        width: 100%;
+        min-height: 250px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        margin: 10px;
+    }
+
+    .fund-title {
+        text-align: left;
+    }
+    .fund-amount {
+        text-align: left;
+    }
 }
